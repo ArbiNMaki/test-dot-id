@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <main className="">
-      <h1>Next.js Auth Tutorial</h1>
+      <h1>Ini Dashboard</h1>
     </main>
   );
 }
