@@ -20,7 +20,7 @@ export default function Nav() {
         </div>
         {isLoaded && user && (
           <>
-            <Link href="/dashboard" className="pr-2">Dashboard</Link>
+            <Link href="/dashboard" className="pr-2">Hello mate, </Link>
             <UserButton afterSignOutUrl="/" />
           </>
         )}
