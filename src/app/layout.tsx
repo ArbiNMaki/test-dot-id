@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
+// import Navbar from "@/components/Navbar";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,10 +21,12 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className="min-h-screen">
-          <Nav />
-          <div className="flex justify-center items-center p-24">
-            {children}
-          </div>
+        {/* <Navbar location={data?.city.name} /> */}
+          <ReactQueryProvider>
+            <div className="flex justify-center items-center p-24">
+              {children}
+            </div>
+          </ReactQueryProvider>
         </body>
       </html>
     </ClerkProvider>
